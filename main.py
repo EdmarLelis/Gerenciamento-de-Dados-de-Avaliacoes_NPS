@@ -32,8 +32,13 @@ class NpsGrafico:
 
         for i, zona in enumerate(self.NPS_ZONAS):
             ax.barh([0], width=self.NPS_VALORES[i + 1] - self.NPS_VALORES[i], left=self.NPS_VALORES[i], color=self.NPS_CORES[i])
+            ax.set_yticks([])
+            ax.set_xlim(-100, 100)
+            ax.set_xticks(self.NPS_VALORES)
 
-        ax.barh([0], width=1.2, left=self.nps, color='black')
+        ax.barh([0], width=.6, left=self.nps, color='black')
+
+        plt.text(nps, 0, f'{nps:.2f}', ha='center', va='center', color='white', weight='bold', bbox=dict(facecolor='black'))
         plt.show()
 
 
