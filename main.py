@@ -39,7 +39,7 @@ class NpsGrafico:
         ax.barh([0], width=.6, left=self.nps, color='black')
         patches = [mapatches.Patch(color=self.NPS_CORES[i], label=self.NPS_ZONAS[i]) for i in range(len(self.NPS_ZONAS))]
 
-        plt.title("NPS - CALCULATOR")
+        plt.title("Gráfico NPS", weight='bold')
         plt.text(nps, 0, f'{nps:.2f}', ha='center', va='center', color='white', weight='bold', bbox=dict(facecolor='black'))
         plt.legend(handles=patches, bbox_to_anchor=(0, 1))
         plt.show()
