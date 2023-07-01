@@ -39,3 +39,6 @@ class NpsGrafico:
 
 feedback = Feedback(pd.read_csv("arquivos/Avaliação01 - Página1.csv", delimiter=';')['Nota'], pd.read_csv("arquivos/Avaliação01 - Página1.csv", delimiter=';')['Comentario'])
 nps = AnalisandoFeedback(feedback).calcular_nps()
+
+grafico = NpsGrafico(nps, ['Critical', 'Improvement', 'Quality', 'Excellence'], [-100, 0, 50, 75, 100], ['#FF595E', '#FFCA3A', '#8AC926', '#1982C4'])
+grafico.criando_grafico()
