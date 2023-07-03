@@ -1,2 +1,2 @@
 # nps
- Projeto para cálcular nps e gerir dados de avaliações.
+A project to calculate NPS (Net Promoter Score) and manage evaluation data.
